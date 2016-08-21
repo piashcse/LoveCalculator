@@ -27,17 +27,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void onButtonclick(View v){
 
-        EditText e1 = (EditText)findViewById(R.id.editText);
-        EditText e2 = (EditText)findViewById(R.id.editText2);
-        TextView t1 = (TextView)findViewById(R.id.textView);
+        EditText editTextFirstName = (EditText)findViewById(R.id.editText);
+        EditText editTextSecondName = (EditText)findViewById(R.id.editText2);
+        TextView textViewResult  = (TextView)findViewById(R.id.textView);
 
-        String name1 = e1.getText().toString();
-        String name2 = e2.getText().toString();
-
-
+        String name1 = editTextFirstName.getText().toString();
+        String name2 = editTextSecondName.getText().toString();
 
         long  n1,n2,value1,value2;
         float result;
+
+
 
         n1=sum_Of_String(name1);
         n2=sum_Of_String(name2);
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        t1.setText("Love Reult : "+(int)result+"%");
+        textViewResult.setText("Love Reult : "+(int)result+"%");
 
         Toast.makeText(getApplicationContext(),"Love Result : "+(int)result, Toast.LENGTH_SHORT).show();
 
@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Please click again to exit", Toast.LENGTH_SHORT).show();
 
         new Handler().postDelayed(new Runnable() {
 
