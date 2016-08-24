@@ -15,8 +15,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
         android:textSize="20sp"
-        android:hint="Enter First Name" />
+        android:hint="Enter first name" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -27,8 +28,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText2"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
         android:textSize="20sp"
-        android:hint="Enter Second Name" />
+        android:hint="Enter second name" />
     </android.support.design.widget.TextInputLayout>
 
     <Button
@@ -44,12 +46,28 @@
         android:layout_gravity="center"
         android:onClick="onButtonclick" />
 
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:hint="Percentage of Love"
-        android:focusable="true"
-        android:textSize="30dp"
-       android:layout_gravity="center" />
+        android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/imageViewHeart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/resultinheart" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageViewHeart"
+            android:layout_alignTop="@+id/imageViewHeart"
+            android:layout_alignRight="@+id/imageViewHeart"
+            android:layout_alignBottom="@+id/imageViewHeart"
+            android:layout_margin="1dp"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
 </LinearLayout>

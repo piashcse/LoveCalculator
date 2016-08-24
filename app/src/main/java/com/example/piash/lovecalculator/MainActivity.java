@@ -5,11 +5,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +21,8 @@ import java.text.DecimalFormat;
 public class MainActivity extends AppCompatActivity {
 
     boolean doubleBackToExitPressedOnce = false;
+    private ImageView imageViewHeart;
+    private String TAG = "Testing";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,41 +34,45 @@ public class MainActivity extends AppCompatActivity {
         EditText editTextFirstName = (EditText)findViewById(R.id.editText);
         EditText editTextSecondName = (EditText)findViewById(R.id.editText2);
         TextView textViewResult  = (TextView)findViewById(R.id.textView);
+        imageViewHeart = (ImageView)findViewById(R.id.imageViewHeart);
 
         String name1 = editTextFirstName.getText().toString();
         String name2 = editTextSecondName.getText().toString();
 
         long  n1,n2,value1,value2;
         float result;
+        if( !name1.equals("") && !name2.equals("")){
 
+            n1=sum_Of_String(name1);
+            n2=sum_Of_String(name2);
 
+            value2=one_Digit( n1 );
+            value1=one_Digit( n2 );
 
-        n1=sum_Of_String(name1);
-        n2=sum_Of_String(name2);
+            if(value1>value2)
+            {
+                result=((float)value2/(float)value1)*100;
+            } else
+            {
+                result=((float)value1/(float)value2)*100;
 
-        value2=one_Digit( n1 );
-        value1=one_Digit( n2 );
+            }
 
-        if(value1>value2)
-        {
+            textViewResult.setText(""+(int)result+"%");
 
-            result=((float)value2/(float)value1)*100;
+            Toast.makeText(getApplicationContext(),"Love Result : "+(int)result, Toast.LENGTH_SHORT).show();
+            imageViewHeart.setVisibility(View.VISIBLE);
+
+            InputMethodManager inputManager = (InputMethodManager)
+                    getSystemService(Context.INPUT_METHOD_SERVICE);
+
+            inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                    InputMethodManager.HIDE_NOT_ALWAYS);
+        }else {
+            Toast.makeText(getApplicationContext(), "Please Give Two Names", Toast.LENGTH_SHORT).show();
         }
-        else
-        {
-            result=((float)value1/(float)value2)*100;
 
-        }
 
-        textViewResult.setText("Love Reult : "+(int)result+"%");
-
-        Toast.makeText(getApplicationContext(),"Love Result : "+(int)result, Toast.LENGTH_SHORT).show();
-
-        InputMethodManager inputManager = (InputMethodManager)
-                getSystemService(Context.INPUT_METHOD_SERVICE);
-
-        inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
-                InputMethodManager.HIDE_NOT_ALWAYS);
 
     }
 
@@ -73,8 +81,6 @@ public class MainActivity extends AppCompatActivity {
         for( int i = 0; i < name.length(); i++){
             if(name.charAt(i)>= 'a' && name.charAt(i)<= 'z' || name.charAt(i)>= 'A' && name.charAt(i)<= 'Z')
             {
-
-
                 switch(name.charAt(i))
                 {
                     case 'a':
@@ -243,7 +249,8 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setTitle("About Me");
             alert.setIcon(R.drawable.lovea);
-            String name = "I'm Mehedi Hassan Piash \n CSE graduate \n working as a software Engineer";
+            String name = "I'm Mehedi Hassan Piash \n working as a software Engineer in Android\nContact info : 01812353930" +
+                    "\nEmail : piash599@gmail.com";
             alert.setMessage(name);
             alert.show();
 
