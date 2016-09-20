@@ -2,6 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
     android:orientation="vertical"
     tools:context="com.example.piash.lovecalculator.MainActivity"
     android:background="@drawable/lovebackground">
@@ -34,13 +36,13 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:layout_width="100dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
         android:id="@+id/button"
         android:text="Result"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textColor="#eeee"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/circularbutton"
         android:textAllCaps="false"
         android:layout_gravity="center"

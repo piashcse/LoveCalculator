@@ -249,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder alert = new AlertDialog.Builder(this);
             alert.setTitle("About Me");
             alert.setIcon(R.drawable.lovea);
-            String name = "I'm Mehedi Hassan Piash \n working as a software Engineer in Android\nContact info : 01812353930" +
+            String name = "I'm Mehedi Hassan Piash, \nworking as a software Engineer in Android Development. \nContact info : 01812353930" +
                     "\nEmail : piash599@gmail.com";
             alert.setMessage(name);
             alert.show();
