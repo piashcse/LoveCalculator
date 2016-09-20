@@ -5,7 +5,7 @@
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
     android:orientation="vertical"
-    tools:context="com.example.piash.lovecalculator.MainActivity"
+    tools:context="com.mp.piash.lovecalculator.piash.mp.piash.lovecalculator.MainActivity"
     android:background="@drawable/lovebackground">
 
     <android.support.design.widget.TextInputLayout
