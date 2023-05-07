@@ -1,75 +1,77 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="8dp"
-    android:layout_marginRight="8dp"
+    android:background="@drawable/lovebackground"
     android:orientation="vertical"
-    tools:context="com.mp.piash.lovecalculator.piash.mp.piash.lovecalculator.MainActivity"
-    android:background="@drawable/lovebackground">
+    android:paddingHorizontal="16dp"
+    android:paddingTop="48dp"
+    tools:context=".MainActivity">
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/input_layout_name"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-        android:textSize="20sp"
-        android:hint="Enter first name" />
-    </android.support.design.widget.TextInputLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="@string/enter_first_name"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/input_layout_email"
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
-        android:textSize="20sp"
-        android:hint="Enter second name" />
-    </android.support.design.widget.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="@string/enter_second_name"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:layout_width="80dp"
+        android:id="@+id/result"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
-        android:text="Result"
-        android:textSize="20dp"
-        android:textColor="#eeee"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/circularbutton"
-        android:textAllCaps="false"
         android:layout_gravity="center"
-        android:onClick="onButtonclick" />
+        android:layout_marginTop="32dp"
+        android:background="@drawable/circularbutton"
+        android:text="@string/result"
+        android:textAllCaps="false"
+        android:textColor="@color/text_color"
+        android:textSize="20sp" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
-        <ImageView
+        android:layout_gravity="center"
+        android:layout_marginTop="48dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imageViewHeart"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/resultinheart" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/result_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/imageViewHeart"
+            android:layout_alignStart="@+id/imageViewHeart"
             android:layout_alignTop="@+id/imageViewHeart"
-            android:layout_alignRight="@+id/imageViewHeart"
+            android:layout_alignEnd="@+id/imageViewHeart"
             android:layout_alignBottom="@+id/imageViewHeart"
-            android:layout_margin="1dp"
-            android:textSize="40sp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
             android:gravity="center"
-            android:textColor="#000000" />
+            android:textColor="@color/black"
+            android:textSize="32sp" />
     </RelativeLayout>
-
-</LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
