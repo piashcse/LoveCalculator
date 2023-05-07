@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Love Calculator</string>
-
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">About</string>
+    <string name="enter_first_name">Enter first name</string>
+    <string name="enter_second_name">Enter second name</string>
+    <string name="result">Result</string>
+    <string name="please_click_again_to_exit">Please click again to exit</string>
+    <string name="about_me">About Me</string>
+    <string name="please_give_two_names">Please Give Two Names</string>
 </resources>
