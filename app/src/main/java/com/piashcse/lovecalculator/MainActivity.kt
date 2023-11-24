@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
                     else -> {}
                 }
             }
-        } // end for
+        }
         return total
     }
 
@@ -104,8 +104,8 @@ class MainActivity : AppCompatActivity() {
             digit = 0
             while (numberForCalculation != 0L) {
                 mod = numberForCalculation % 10
-                numberForCalculation = numberForCalculation / 10
-                digit = digit + mod
+                numberForCalculation /= 10
+                digit += mod
             }
             numberForCalculation = digit
         }
@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity() {
             alert.setIcon(R.drawable.lovea)
             val name = """
                 I'm Mehedi Hassan Piash, 
-                working as a software Engineer in Android Development. 
+                working as a Senior Software Engineer. 
                 Contact info : 01812353930
                 Email : piash599@gmail.com
                 """.trimIndent()
