@@ -1,77 +1,84 @@
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/lovebackground"
-    android:orientation="vertical"
-    android:paddingHorizontal="16dp"
-    android:paddingTop="48dp"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:paddingTop="16dp"
+        android:paddingHorizontal="16dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name_one"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:hint="@string/enter_first_name"
-            android:textSize="20sp" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="@string/enter_first_name"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/name_two"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:hint="@string/enter_second_name"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/result"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            android:hint="@string/enter_second_name"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/circularbutton"
+            android:text="@string/result"
+            android:textAllCaps="false"
+            android:textColor="@color/text_color"
             android:textSize="20sp" />
-    </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/result"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/circularbutton"
-        android:text="@string/result"
-        android:textAllCaps="false"
-        android:textColor="@color/text_color"
-        android:textSize="20sp" />
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="48dp">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageViewHeart"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/resultinheart" />
+            android:layout_gravity="center"
+            android:layout_marginTop="48dp">
 
-        <TextView
-            android:id="@+id/result_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/imageViewHeart"
-            android:layout_alignTop="@+id/imageViewHeart"
-            android:layout_alignEnd="@+id/imageViewHeart"
-            android:layout_alignBottom="@+id/imageViewHeart"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="1dp"
-            android:layout_marginBottom="1dp"
-            android:gravity="center"
-            android:textColor="@color/black"
-            android:textSize="32sp" />
-    </RelativeLayout>
-</androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewHeart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/resultinheart" />
+
+            <TextView
+                android:id="@+id/result_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/imageViewHeart"
+                android:layout_alignTop="@+id/imageViewHeart"
+                android:layout_alignEnd="@+id/imageViewHeart"
+                android:layout_alignBottom="@+id/imageViewHeart"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="1dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="32sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

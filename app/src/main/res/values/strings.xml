@@ -6,5 +6,9 @@
     <string name="result">Result</string>
     <string name="please_click_again_to_exit">Please click again to exit</string>
     <string name="about_me">About Me</string>
+    <string name="about_info">\ I\'m Mehedi Hassan Piash\n
+        Senior Software Engineer.\n
+        Contact info : +88-01812353930\n
+        Email : piash599@gmail.com</string>
     <string name="please_give_two_names">Please Give Two Names</string>
 </resources>
